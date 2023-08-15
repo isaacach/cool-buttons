@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cadetblue;
+  min-height: 100vh;
+}
+
+.flip {
+  width: 400px;
+  height: 70px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: all ease .3s;
+}
+
+.flip:hover {
+  scale: 1.05;
+}
+
+.flip span {
+  font-size: 3.5rem;
+  color: blanchedalmond;
+}
+
+.flip:hover span{
+  animation: flip .5s;
+}
+
+.flip span:nth-child(1){
+  animation-delay: 0;
+}
+
+.flip span:nth-child(2){
+  animation-delay: .05s;
+}
+
+.flip span:nth-child(3){
+  animation-delay: .1s;
+}
+
+.flip span:nth-child(4){
+  animation-delay: .15s;
+}
+
+.flip span:nth-child(5){
+  animation-delay: .2s;
+}
+
+.flip span:nth-child(7){
+  animation-delay: .25s;
+}
+
+.flip span:nth-child(8){
+  animation-delay: .3s;
+}
+
+@keyframes flip {
+  25% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.garage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.door-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: aliceblue;
+  height: 50%;
+  width: 100%;
+  transition: height ease .5s;
+  overflow: hidden;
+}
+
+.door-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: aliceblue;
+  height: 50%;
+  width: 100%;
+  transition: height ease .5s;
+  overflow: hidden;
+}
+
+.door-top img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 40px;
+}
+
+.door-bottom img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+
+.garage:hover .door-top {
+  height: 0;
+}
+
+.garage:hover .door-bottom {
+  height: 0;
+}
+
+.garage button {
+  width: 130px;
+  height: 50px;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(rgb(239, 10, 208), rgb(123, 19, 123));
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+}
+
+.garage button img {
+  width: 30px;
+}
+
